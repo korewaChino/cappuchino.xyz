@@ -110,7 +110,7 @@ export default function Home() {
                 <Link block href="mailto:cappy@cappuchino.xyz">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </Link>
-                <Link rel="me" href="https://mstdn.social/@korewaChino">
+                <Link block rel="me" href="https://mstdn.social/@korewaChino">
                   <FontAwesomeIcon icon={faMastodon} />
                 </Link>
               </Grid.Container>
