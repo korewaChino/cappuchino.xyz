@@ -3,13 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --callout-rgb: 238, 240, 241;
+  --callout-border-rgb: 172, 175, 176;
+  --card-rgb: 180, 185, 188;
+  --card-border-rgb: 131, 134, 135;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,16 +25,21 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --nextui-colors-foreground: #fff;
   }
 }
 
 html,
-
-
 body {
   color: rbg(--foreground-rgb);
-  /* @apply bg-gray-900; */
 }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 
 a {
   color: inherit;
@@ -39,12 +51,12 @@ a {
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
-  @apply dark:bg-gray-800;
+  @apply dark:bg-gray-800 bg-gray-200;
   @apply dark:text-white;
 }
 
 .txtbody {
-  @apply text-xl dark:text-gray-100 text-gray-900;
+  @apply text-lg dark:text-gray-100 text-gray-900;
 }
 
 @media (prefers-color-scheme: dark) {
