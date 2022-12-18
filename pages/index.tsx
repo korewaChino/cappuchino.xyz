@@ -83,8 +83,8 @@ export default function Home() {
               className="inline-block"
             >
               Ultramarine Linux
-            </Link>
-            @ Project Lead
+            </Link>{" "}
+            Project Lead
             <br />
             <Text className="text-xl pt-4 dark:text-white">
               AKA Cappy Ishihara. Software and Systems Engineer from Bangkok,
