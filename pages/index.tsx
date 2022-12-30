@@ -23,6 +23,8 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import Skills from "../components/skills";
+import Works from "../components/works";
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -70,26 +72,8 @@ export default function Home() {
                   <Text className="txtbody">Gender: Genderfluid</Text>
                 </Collapse>
 
-                <Collapse title="Skills">
-                  <Text className="text-2xl dark:text-white">
-                    Programming Languages
-                  </Text>
-                  <Text className="txtbody">
-                    Rust, Python, TypeScript (JavaScript), Go Frameworks:
-                    Next.js, React, Nuxt.js, Vue.js, Flask, Rocket, Tokio
-                  </Text>
-                  <Spacer />
-                  <Text className="text-2xl dark:text-white">Frameworks</Text>
-                  <Text className="txtbody">
-                    Next.js, React, Nuxt.js, Vue.js, Flask, Rocket, Tokio
-                  </Text>
-                  <Spacer />
-
-                  <Text className="text-2xl dark:text-white">Technologies</Text>
-                  <Text className="txtbody">
-                    Docker, Kubernetes, Ansible, Git, Linux (Fedora/RHEL)
-                  </Text>
-                </Collapse>
+                <Collapse title="Skills">{Skills()}</Collapse>
+                <Collapse title="Works">{Works()}</Collapse>
               </Collapse.Group>
             </Card.Body>
             <Card.Footer>
