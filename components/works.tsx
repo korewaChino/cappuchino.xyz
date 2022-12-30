@@ -23,7 +23,7 @@ export default function Works() {
         <li>
           <Text className="dark:text-white">
             Datchani (ดัชนี) - A filesystem indexer and search engine in Rust,
-            powered by SurrealDB. Created as a replacement for GNOME's Tracker
+            powered by SurrealDB. Created as a replacement for GNOME&aposs Tracker
             for tauOS.
           </Text>
         </li>
