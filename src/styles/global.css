@@ -1,5 +1,67 @@
 /* stylelint-disable at-rule-no-unknown */
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
 @import "tailwindcss";
+
+/* Color system using CSS variables so we can support dark mode */
+:root {
+  --bg: #ffffff;
+  --text: #0f172a; /* slate-900 */
+  --muted: #6b7280; /* gray-500 */
+  --link: #2563eb; /* blue-600 */
+  --kbd-bg: #e5e7eb; /* gray-200 */
+  --kbd-text: #1f2937; /* gray-800 */
+  --hr: #d1d5db; /* gray-300 */
+  --blockquote-border: #e5e7eb; /* gray-200 */
+}
+
+/* Concrete dark palette values declared once */
+:root {
+  --dark-bg: #0b1220; /* dark background */
+  --dark-text: #e6eef8; /* light text */
+  --dark-muted: #9aa6b2; /* muted light */
+  --dark-link: #93c5fd; /* lighter blue */
+  --dark-kbd-bg: #1f2937; /* slate-800 */
+  --dark-kbd-text: #e6eef8;
+  --dark-hr: #1f2937;
+  --dark-blockquote-border: #172033;
+}
+
+/* Respect OS-level preference and allow manual toggling with [data-theme="dark"] */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--dark-bg);
+    --text: var(--dark-text);
+    --muted: var(--dark-muted);
+    --link: var(--dark-link);
+    --kbd-bg: var(--dark-kbd-bg);
+    --kbd-text: var(--dark-kbd-text);
+    --hr: var(--dark-hr);
+    --blockquote-border: var(--dark-blockquote-border);
+  }
+}
+
+/* Also allow an explicit attribute on the root element to force dark theme */
+[data-theme="dark"] {
+  --bg: var(--dark-bg);
+  --text: var(--dark-text);
+  --muted: var(--dark-muted);
+  --link: var(--dark-link);
+  --kbd-bg: var(--dark-kbd-bg);
+  --kbd-text: var(--dark-kbd-text);
+  --hr: var(--dark-hr);
+  --blockquote-border: var(--dark-blockquote-border);
+}
+
+body {
+  padding: clamp(1rem, 2.5vw, 3rem);
+  @apply mx-auto;
+  font-family: 'Anuphan', sans-serif;
+  font-weight: 400;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
 
 h1 {
   @apply text-4xl font-bold mb-4;
@@ -14,12 +76,18 @@ h3 {
 }
 
 kbd {
-  @apply bg-gray-200 text-gray-800 px-2 py-1 rounded;
+  background-color: var(--kbd-bg);
+  color: var(--kbd-text);
+  @apply px-2 py-1 rounded;
 }
 
-body {
-  padding: clamp(1rem, 2.5vw, 3rem);
-  @apply mx-auto;
+em {
+  @apply italic;
+}
+
+small {
+  font-size: 0.875em; /* 14px if base is 16px */
+  color: var(--muted);
 }
 
 :where(main, article, section) > * + * {
@@ -32,11 +100,16 @@ p {
 }
 
 blockquote {
-  @apply pl-4 border-l-4 border-gray-200 italic text-gray-700 my-4;
+  @apply pl-4 italic my-4;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: var(--blockquote-border);
+  color: var(--muted);
 }
 
 ol {
   @apply list-decimal pl-6 mb-4;
+  color: var(--text);
 }
 ol li {
   @apply mb-2;
@@ -44,17 +117,27 @@ ol li {
 
 ul {
   @apply list-disc pl-6 mb-4;
+  color: var(--text);
 }
 ul li {
   @apply mb-2;
 }
 
 a {
-  @apply text-blue-600 hover:underline;
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 hr {
-  @apply border-t border-gray-300 my-6;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--hr);
+  margin: 1.5rem 0;
 }
 
 /* Reset excessive bottom margin on the last child of main/article/section */
