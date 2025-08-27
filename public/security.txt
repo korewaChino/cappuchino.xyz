@@ -1,0 +1,28 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+# If in any case you need to contact me for really urgent security-related matters, please use the following methods:
+Canonical: https://cappuchino.xyz/security.txt
+# todo: lease this domain from THNIC
+# Canonical: https://cappy.in.th/security.txt
+
+Preferred-Languages: en, th, en_owo
+
+Contact: mailto:cappy@fyralabs.com
+Contact: mailto:cappy@cappuchino.xyz
+Contact: https://fyralabs.com/.well-known/security.txt
+
+Encryption: https://github.com/korewaChino.gpg
+Encryption: https://github.com/korewaChino.keys
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEEykSDE74+qdSnGpFdUIYsKFy3aQYFAmiu0AoACgkQUIYsKFy3
+aQbcowf+IvZXUD+uC7sRaXQpcAdcjfca6xIooxxk8054JORzVDMlOPh82+IOvsDL
+nk/mfq4iUMTYwHiNCnCdvneBdR/RQlY3G2FH8Nl/IHd9B+QE+mFj77uZcJhKSnMb
+2DIs4G5Hv8+hdgNW2F+FZ39gyIqOIChjlBSr03J2qjKFSBzDTz530VySku3lQ0Dh
+eij4pjBARHtjGqtELVVONVPghN8uzV/XizQ4WBRw7twKbaM/zoAPpJ5C81GJc0sV
+b7B8/D3jw1nSLcVV9eSIwvYCyTU5Y6wX7Z1gslNmLh0JcUMFMjqzsQus7tTT4XNS
+L6utvydSx3eySFS9ICrOgBCMY5oCqg==
+=fbDB
+-----END PGP SIGNATURE-----
